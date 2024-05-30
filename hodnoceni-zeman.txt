@@ -1,0 +1,13 @@
+Ceníme práci na projektu! 🏆 Prohlédli jsme si kód a máme k němu následující poznámky:
+
+1. Pojmenování identifikátorů - ok
+2. Dodržení principů SRP a SoC - Bylo by lepší, kdyby metoda vypisVsechnyPojistence() hodnotu spíše vracela (return) než vypisovala. Lze vracet buď přímo celý ArrayList nebo si textovou reprezentaci pojištěnců postupně načíst do jednoho Stringu a ten pak vrátit.
+3. Vhodný výběr datových typů - Telefon by se měl ukládat jako String, nikoliv jako Integer. S telefonním číslem nepracujeme jako s číslem, nesčítáme či neodečítáme od něho. Dále bychom do takové proměnné nemohli uložit čísla s mezinárodní předvolbou.
+4. Formátování kódu - ok
+5. Duplicitní kód a nekonečné cykly - Řádky System.out.println(); System.out.println("Pokračujte libovolnou klávesou..."); se nachází ve všech funkcích uživatelského rozhraní. Kdybych tyto řádky dal na konec switche, stačilo by je napsat pouze jednou.
+6. Validace vstupních dat - ok, lze nad rámec zadání rozšířit o kontrolu nečíselnosti (try-catch) a nezápornosti (if) věku, popřípadě formátu telefonního čísla. Při implementování složitější validace by ovšem bylo vhodné ji rozdělit do metod.
+7. Logičnost a složitost - ok
+8. Komentáře - ok
+9. Celkové hodnocení - Kód splňuje zadání. Doporučuji hlavně změnit datový typ telefonního čísla, další možné nápady na refaktorování jsou zmíněny výše.
+
+Doporučujeme případné výtky v kódu opravit, abyste jej mohli pak prezentovat budoucímu zaměstnavateli v co nejlepší kvalitě. Pokud byste potřebovali s čímkoli pomoci, naplánujte si s námi konzultaci, rádi vám poradíme!
