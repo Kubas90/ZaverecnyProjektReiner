@@ -39,6 +39,9 @@ public class Main {
                     System.out.println("Neplatná volba, stiskněte libovolnou klávesu a opakujte volbu.");
                     break;
             }
+            System.out.println();
+            System.out.println("Pokračujte libovolnou klávesou...");
+            scanner.nextLine();
         }
         scanner.close();
     }

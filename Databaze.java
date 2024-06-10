@@ -29,7 +29,7 @@ public class Databaze {
      * @param vek      Věk
      * @param telefon  Telefon
      */
-    public void pridejPojistence(String jmeno, String prijmeni, int vek, int telefon) {
+    public void pridejPojistence(String jmeno, String prijmeni, int vek, String telefon) {
         pojistenci.add(new Pojistenec(jmeno, prijmeni, vek, telefon));
     }
 
@@ -51,17 +51,14 @@ public class Databaze {
     }
 
     /**
-     * Vypisuje celou databázi pojištěnců
+     * Getter pro výpis všech pojištenců
+     *
+     * @return vrací pojištěnce
      */
-    public void vypisVsechnyPojistence() {
-        if (pojistenci.isEmpty()) {
-            System.out.println("V databázi nejsou žádní pojištěnci");
-        } else {
-            for (Pojistenec pojistenec : pojistenci) {
-                System.out.println(pojistenec);
-            }
-        }
+    public ArrayList<Pojistenec> getPojistenci() {
+        return pojistenci;
     }
+
 }
 
 

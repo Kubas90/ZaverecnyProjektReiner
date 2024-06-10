@@ -33,10 +33,9 @@ public class Evidence {
         System.out.println("Zadejte věk: ");
         int vek = Integer.parseInt(scanner.nextLine().trim());
         System.out.println("Zadejte telefon: ");
-        int telefon = Integer.parseInt(scanner.nextLine().trim());
+        String telefon = scanner.nextLine().trim();
         databaze.pridejPojistence(jmeno, prijmeni, vek, telefon);
-        System.out.println();
-        System.out.println("Data byla uložena. Pokračujte libovolnou klávesou...");
+
     }
 
     /**
@@ -56,26 +55,30 @@ public class Evidence {
                 System.out.println(pojistenec);
             }
         }
-        System.out.println();
-        System.out.println("Pokračujte libovolnou klávesou...");
+
     }
 
     /**
      * Metoda sloužící k výpisu všech pojištěnců
      */
     public void vypisVsechnyPojistence() {
-        databaze.vypisVsechnyPojistence();
-        System.out.println();
-        System.out.println("Pokračujte libovolnou klávesou...");
+        if (databaze.getPojistenci().isEmpty()) {
+            System.out.println("V databázi nejsou žádní pojištěnci");
+        } else {
+            for (Pojistenec pojistenec : databaze.getPojistenci()) {
+                System.out.println(pojistenec);
+            }
+        }
     }
 
-    /**
-     * Metoda sloužící k designovému výpisu úvodní obrazovky
-     */
-    public void vypisObrazovky() {
-        System.out.println();
-        System.out.println("\n---------------------------");
-        System.out.println("Evidence pojištěných");
-        System.out.println("---------------------------");
+        /**
+         * Metoda sloužící k designovému výpisu úvodní obrazovky
+         */
+        public void vypisObrazovky () {
+            System.out.println();
+            System.out.println("\n---------------------------");
+            System.out.println("Evidence pojištěných");
+            System.out.println("---------------------------");
+        }
     }
-}
+

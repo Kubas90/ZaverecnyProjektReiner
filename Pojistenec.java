@@ -6,7 +6,7 @@ package cz.itnetwork;
 public class Pojistenec {
     private String jmeno;
     private String prijmeni;
-    private int telefon;
+    private String telefon;
 
     private int vek;
 
@@ -18,7 +18,7 @@ public class Pojistenec {
      * @param vek      věk pojištěnce
      * @param telefon  telefon pojištěnce
      */
-    public Pojistenec(String jmeno, String prijmeni, int vek, int telefon) {
+    public Pojistenec(String jmeno, String prijmeni, int vek, String telefon) {
         this.jmeno = jmeno;
         this.prijmeni = prijmeni;
         this.telefon = telefon;
@@ -41,11 +41,11 @@ public class Pojistenec {
         this.prijmeni = prijmeni;
     }
 
-    public int getTelefon() {
+    public String getTelefon() {
         return telefon;
     }
 
-    public void setTelefon(int telefon) {
+    public void setTelefon(String telefon) {
         this.telefon = telefon;
     }
 
